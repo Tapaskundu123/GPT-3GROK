@@ -1,0 +1,328 @@
+/* GPT3.css */
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #040C18;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.GPT3-APP {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.Main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.GPT3-APP.active-sidebar .Main-container {
+  margin-left: 20px;
+}
+
+.output-container {
+  height: 550px;
+  width: 1000px;
+  position: fixed;
+  top: 40px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #2e2e2e;
+  line-height: 1.7;
+  max-height: 70vh;
+}
+
+.input-chat-container {
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 2.5rem;
+  padding: 0.25rem;
+  width: 35vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-chat-container textarea {
+  height: 50px;
+  width: 100%;
+  max-width: 400px;
+  border-color: white;
+  border-radius: 2.5rem;
+  outline: none;
+  color: black;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
+  resize: none;
+}
+
+.sendBtn {
+  margin-right: 1.25rem;
+  color: red;
+  cursor: pointer;
+}
+
+/* Markdown Styles */
+.output-container h1,
+.output-container h2,
+.output-container h3 {
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  line-height: 1.3;
+}
+
+.output-container h1 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.3rem;
+}
+
+.output-container h2 {
+  font-size: 1.5rem;
+}
+
+.output-container h3 {
+  font-size: 1.25rem;
+}
+
+.output-container p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.output-container ul,
+.output-container ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.output-container li {
+  margin-bottom: 0.3rem;
+}
+
+.output-container code {
+  background: #f3f4f6;
+  color: #d6336c;
+  font-family: 'Courier New', monospace;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.output-container pre {
+  background: #0d1117;            /* Deep dark background */
+  color: #c9d1d9;    /* Light gray text for readability */
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border: 1px solid #30363d;      /* Subtle border */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);  /* Soft shadow */
+}
+
+.output-container blockquote {
+  border-left: 4px solid #60a5fa;
+  background: #f0f9ff;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #1e3a8a;
+}
+
+/* Scrollbar Styles for output-container */
+.output-container {
+  scrollbar-width: thin;
+  scrollbar-color: #7c3aed #f3f4f6;
+}
+
+.output-container::-webkit-scrollbar {
+  width: 10px;
+  position: fixed;
+  right: 0;
+}
+
+.output-container::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f3f4f6, #e5e7eb);
+  border-radius: 20px;
+}
+
+.output-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed, #6366f1);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.output-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6d28d9, #4f46e5);
+}
+
+.suggestion-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 3rem 1rem 0 1rem;
+}
+
+.suggestion-heading {
+  line-height: 0.75;
+}
+
+.box-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.box {
+  flex: 0 0 200px;
+  height: 120px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #0E1624;
+  border-radius: 1rem;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.box:hover{
+    background-color: #182132;       /* slightly lighter or brighter */
+    transform: scale(1.05);          
+}
+
+.loading {
+  padding: 1.25rem 0.75rem 0.25rem;
+  display: inline;
+  align-items: center;
+  border: #0E1624;
+  background-color: #1e3a8a;
+  border-radius: 10%;
+}
+
+.suggestion-heading h1 {
+  font-size: 52px;
+  border: none;
+  padding: 0;
+  background: var(--gradient-bar);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.suggestion-heading p {
+  font-size: 3.25rem;
+  line-height: 1.2;
+  color: lavender;
+  border: none;
+  padding: 0;
+}
+
+.icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Scrollbar Styles for box-container */
+.box-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.box-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.box-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.box-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.input-msg-div {
+  border-radius: 2rem;
+  display: inline-block;
+  background-color: #1e3a8a;
+  padding: 0.25rem 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1422px) {
+  .output-container {
+    height: 80vh;
+    width: 50vw;
+  }
+  .suggestion-heading p {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 768px) {
+  .Main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .GPT3-APP.active-sidebar .Main-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .output-container {
+    width: 70vw;
+    height: 70vh;
+    position: static;
+  }
+
+  .input-chat-container {
+    width: 70vw;
+    left: 15vw;
+    bottom: 20px;
+    padding: 0.5rem;
+  }
+
+  .input-chat-container textarea {
+    width: 100%;
+    height: 40px;
+  }
+
+  .sendBtn {
+    margin-left: 1rem;
+  }
+
+  .suggestion-heading p {
+    font-size: 1.75rem;
+    line-height: 1.0;
+  }
+}

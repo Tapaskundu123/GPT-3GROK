@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# Compiled files (if using TypeScript)
+dist/
+build/
+
+# OS junk
+.DS_Store
+
+# Others
+coverage/

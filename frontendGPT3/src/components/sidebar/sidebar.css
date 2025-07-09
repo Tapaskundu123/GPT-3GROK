@@ -1,0 +1,147 @@
+/* src/components/Sidebar.css */
+.sidebar-container {
+  width: 350px;
+  height: 100vh;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #0E1624;
+  transition: width 0.3s ease;
+}
+
+.sidebar-div {
+  width: 100px;
+  padding: 2rem;
+  height: 100vh;
+  border: 2px solid white;
+  background: var(--color-bg);
+  transition: width 0.3s ease;
+}
+
+.GPT-3img-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gpt-3logo {
+  height: 20px;
+}
+
+.upperDiv-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.newChatBtn {
+  background: var(--gradient-bar);
+  cursor: pointer;
+}
+
+.new-chat-btn-div {
+  padding-top: 2rem;
+}
+
+.new-chat-btn-div button {
+  width: 282px;
+  padding: 1rem 0;
+  background: var(--gradient-bar);
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  font-weight: bolder;
+  font-size: large;
+  color: white;
+  cursor: pointer;
+}
+
+.gpt3-q-1 {
+  padding: 1rem;
+  display: flex;
+  gap: 20px;
+  border: 1px solid white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  
+}
+.gpt3-q-1:hover{
+  background-color:  #182132;
+  transform: scale(1.05);
+}
+.gpt3-q-1 p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.upperside-sidebar {
+  border-bottom: 2px solid white;
+  height: 450px;
+}
+
+.house-div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.house-div p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.lower-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.gpt3-closeSidebar {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 1422px) {
+  .sidebar-container {
+    height: 100vh;
+    width: 25vw;
+    padding: 1rem;
+  }
+  .new-chat-btn-div button {
+    padding: 1rem 4rem;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .new-chat-btn-div button {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    position: fixed;
+    width: 50vw;
+    z-index: 1000;
+  }
+
+  .sidebar-div {
+    width: 60px;
+  }
+
+  .gpt3-closeSidebar {
+    padding: 1rem 0.25rem 1rem 0.75rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .sidebar-container {
+    width: 80vw;
+  }
+}
