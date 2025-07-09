@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://gpt-3-grok-9epxxicdl-tapaskundu123s-projects.vercel.app', // Adjust to your React app’s port
+  origin: 'https://gpt-3-grok-git-main-tapaskundu123s-projects.vercel.app', // Adjust to your React app’s port
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
