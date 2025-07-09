@@ -66,7 +66,7 @@ const GPT3 = () => {
   };
 
   const handleApiData = async (data) => {
-    
+
     setLoading(true);
     try {
       const res = await axios.post('https://gpt3-backend.onrender.com/api/GPT3', {
@@ -109,8 +109,8 @@ const GPT3 = () => {
                   <Lightbulb className="icon" />
                 </div>
 
-                <div onClick={() => handleSuggestion('Brainstorm team bonding activities for our work retreat')} className="box">
-                  <p>Brainstorm team bonding activities for our work retreat</p>
+                <div onClick={() => handleSuggestion('How would you implement refresh tokens securely in a Node + JWT + MongoDB application')} className="box">
+                  <p>How would you implement refresh tokens securely in a Node + JWT + MongoDB application?</p>
                   <MessageSquare className="icon" />
                 </div>
 
