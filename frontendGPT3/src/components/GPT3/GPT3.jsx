@@ -66,6 +66,7 @@ const GPT3 = () => {
   };
 
   const handleApiData = async (data) => {
+    
     setLoading(true);
     try {
       const res = await axios.post('https://gpt3-backend.onrender.com/api/GPT3', {
