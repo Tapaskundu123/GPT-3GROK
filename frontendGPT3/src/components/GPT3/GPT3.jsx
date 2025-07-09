@@ -109,8 +109,8 @@ const GPT3 = () => {
                   <Lightbulb className="icon" />
                 </div>
 
-                <div onClick={() => handleSuggestion('How would you implement refresh tokens securely in a Node + JWT + MongoDB application')} className="box">
-                  <p>How would you implement refresh tokens securely in a Node + JWT + MongoDB application?</p>
+                <div onClick={() => handleSuggestion('How does the virtual DOM work in React?')} className="box">
+                  <p>How does the virtual DOM work in React?</p>
                   <MessageSquare className="icon" />
                 </div>
 
