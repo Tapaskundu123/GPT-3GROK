@@ -1,6 +1,6 @@
 // src/components/GPT3.jsx
 import { useRef, useEffect, useState } from 'react';
-import Sidebar from '../sidebar/sidebar.jsx';
+import Sidebar from '../sidebar/Sidebar.jsx';
 import {
   SendHorizontal,
   TreePine,

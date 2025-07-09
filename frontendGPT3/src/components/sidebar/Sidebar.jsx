@@ -1,5 +1,5 @@
 // src/components/Sidebar.jsx
-import React ,{useState}from 'react';
+import {useState} from 'react';
 import GPT3Logo from '../../assets/logo.svg';
 import {
   House,
@@ -22,7 +22,7 @@ const Sidebar = ({ sidebar, handleSidebar }) => {
   }
 
   const handleRefresh= ()=>{
-    
+
     dispatch(GoToNewChat(true));
   }
    
