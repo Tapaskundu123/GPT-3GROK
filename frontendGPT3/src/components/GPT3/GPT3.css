@@ -279,11 +279,16 @@ body, html {
 @media screen and (max-width: 1422px) {
   .output-container {
     height: 80vh;
-    width: 50vw;
+    width: 60vw;
   }
   .suggestion-heading p {
     font-size: 2.5rem;
     line-height: 1.1;
+  }
+  .suggestion-container{
+   padding: 0;
+   display: flex;
+   justify-content: space-around;
   }
 }
 
@@ -292,6 +297,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 1rem; /* added */
+    margin: 0;
   }
 
   .GPT3-APP.active-sidebar .Main-container {
@@ -300,16 +307,21 @@ body, html {
   }
 
   .output-container {
-    width: 70vw;
+    width: 80vw;
+    /* 70vw */
     height: 70vh;
     position: static;
+    padding: 0;
   }
 
   .input-chat-container {
-    width: 70vw;
+    width: 85vw;
+    /* 80vw */
     left: 15vw;
     bottom: 20px;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
+    text-align: center;
+
   }
 
   .input-chat-container textarea {
@@ -325,4 +337,14 @@ body, html {
     font-size: 1.75rem;
     line-height: 1.0;
   }
+}
+@media screen and (max-width:450px){
+     .Main-container {
+      justify-content: space-around;
+      padding: 1rem 2rem 2rem 0;
+     }
+    .input-chat-container {
+      margin: 0rem 2rem 2rem 0rem;
+    }
+
 }
